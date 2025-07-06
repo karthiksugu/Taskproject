@@ -36,14 +36,14 @@ export default function RegisterScreen({ navigation }: NativeStackScreenProps<Ro
 
   return (
     <ScrollView contentContainerStyle={{ padding: 20 }}>
-      <Text>Name:</Text>
+      <Text style={styles.label}>Name:</Text>
       <TextInput
         value={name}
         onChangeText={setName}
         style={styles.input}
       />
 
-      <Text>Phone Number:</Text>
+      <Text style={styles.label}>Phone Number:</Text>
       <TextInput
         value={phoneNumber}
         onChangeText={setPhoneNumber}
@@ -51,7 +51,7 @@ export default function RegisterScreen({ navigation }: NativeStackScreenProps<Ro
         style={styles.input}
       />
 
-      <Text>Address:</Text>
+      <Text style={styles.label}>Address:</Text>
       <TextInput
         value={address}
         onChangeText={setAddress}
@@ -59,14 +59,14 @@ export default function RegisterScreen({ navigation }: NativeStackScreenProps<Ro
         style={styles.input}
       />
 
-      <Text>Email:</Text>
+      <Text style={styles.label}>Email:</Text>
       <TextInput
         value={username}
         onChangeText={setUsername}
         style={styles.input}
       />
 
-      <Text>Password:</Text>
+      <Text style={styles.label}>Password:</Text>
       <TextInput
         value={password}
         onChangeText={setPassword}
@@ -88,6 +88,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     marginBottom: 15,
+    color: 'black'
   },
   button: {
     backgroundColor: '#4CAF50',
@@ -100,5 +101,10 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
+  },
+    label: {
+    color: 'black',
+    fontSize: 16,
+   
   },
 })

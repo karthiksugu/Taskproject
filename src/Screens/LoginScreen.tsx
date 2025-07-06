@@ -25,9 +25,9 @@ export default function LoginScreen({ navigation }: NativeStackScreenProps<RootS
 
   return (
     <View style={{ marginTop: 100,paddingHorizontal:20 }}>
-      <Text>Email</Text>
+      <Text style={styles.label}>Email</Text>
       <TextInput value={username} onChangeText={setUsername} style={styles.input} />
-      <Text>Password</Text>
+      <Text style={styles.label}>Password</Text>
       <TextInput value={password} onChangeText={setPassword} secureTextEntry style={styles.input} />
       <View style={styles.buttonContainer}>
         <Pressable style={({ pressed }) => [styles.loginButton, pressed && styles.buttonPressed]} onPress={handleLogin}>
@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     marginBottom: 15,
+    color: 'black'
   },
   buttonContainer: {
    // flexDirection: 'row',
@@ -78,5 +79,9 @@ const styles = StyleSheet.create({
   },
   buttonPressed: {
     opacity: 0.7,
+  },
+      label: {
+    color: 'black',
+    fontSize: 16,
   },
 })
